@@ -1,0 +1,10 @@
+Function id : 3.5
+
+Faculty view salary history :
+Ask the faculty to login and then display the salary, the history of salary disbursement, also allow them to download the salary slip of a particular month.
+
+Database :
+login-credential: username(PK), password, name, updatedAt, createdAt
+salary : PK, month-year, amount disbursed, file-path, date-of-disbursement
+
+file-download functionality between REST-API and REACT (character stream)
