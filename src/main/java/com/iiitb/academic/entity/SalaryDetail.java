@@ -16,7 +16,7 @@ public class SalaryDetail {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "user_id")
+    @Column(name = "user_id",insertable=false, updatable=false)
     private String user_id;
 
     @Column(name = "description")
@@ -37,5 +37,9 @@ public class SalaryDetail {
 
     @Column(name = "salary_slip")
     private String salary_slip;
+
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "user_id")
+//    private User user;
 
 }

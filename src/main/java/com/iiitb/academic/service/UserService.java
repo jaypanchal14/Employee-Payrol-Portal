@@ -68,8 +68,10 @@ public class UserService {
 
         resp.setUsername(user.getUsername());
 
+
         if(request.getPassword().equals(user.getPassword())){
             resp.setAuthenticated(true);
+            resp.setUserId(user.getId());
             resp.setEmail(user.getEmail());
             resp.setName(user.getName());
             log.info("User authenticated successfully.");

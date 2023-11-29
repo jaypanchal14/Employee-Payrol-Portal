@@ -11,5 +11,6 @@ public class SalaryItem {
     private String paymentId;
     private String filePath;
     private String paymentDate;
+    private String description;
 
 }

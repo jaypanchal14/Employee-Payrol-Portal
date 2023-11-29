@@ -6,6 +6,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Table(name = "user")
@@ -35,5 +37,13 @@ public class User {
     @Column( name = "updatedAt")
     @UpdateTimestamp
     private OffsetDateTime updatedAt;
+
+    @OneToOne()
+    @JoinColumn(name = "id", referencedColumnName = "user_id")
+    private SalaryStructure struc;
+
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+//    //@JoinColumn(name = "id", referencedColumnName = "user_id")
+//    List<SalaryDetail> details = new ArrayList<>();
 
 }

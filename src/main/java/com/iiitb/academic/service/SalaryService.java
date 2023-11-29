@@ -75,7 +75,7 @@ public class SalaryService {
             item.setYear(s.getYear());
             item.setMonth(s.getMonth());
             item.setPaymentDate(Utility.getFormattedOffsetTime(s.getPaymentDate()));
-
+            item.setDescription(s.getDescription());
             // Uncomment below if you also want the path to be included in the response
             //item.setFilePath(s.getSalary_slip());
 

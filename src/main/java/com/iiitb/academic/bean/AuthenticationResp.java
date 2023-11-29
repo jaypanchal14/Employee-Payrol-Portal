@@ -8,6 +8,7 @@ import lombok.Data;
 public class AuthenticationResp {
 
     private String username;
+    private String userId;
     private String name;
     private String email;
     private boolean isAuthenticated;

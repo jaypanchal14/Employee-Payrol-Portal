@@ -23,6 +23,8 @@ public class SalaryStructureService {
     }
 
     private Salary getSalaryFromDBObj(SalaryStructure str){
+        log.info("Object from salary-structure table: "+str);
+
         Salary salary = new Salary();
         salary.setUserId((str.getUserId()));
         salary.setDescription(str.getDescription());

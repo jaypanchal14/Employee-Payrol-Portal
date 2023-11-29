@@ -6,7 +6,6 @@ import com.iiitb.academic.bean.AuthenticationRequest;
 import com.iiitb.academic.bean.AuthenticationResp;
 import com.iiitb.academic.bean.Salary;
 import com.iiitb.academic.bean.SalaryDetailsResponse;
-import com.iiitb.academic.entity.SalaryStructure;
 import com.iiitb.academic.entity.User;
 import com.iiitb.academic.service.SalaryService;
 import com.iiitb.academic.service.SalaryStructureService;
@@ -25,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "http://localhost:3000/")
 public class Controller {
 
     @Autowired
@@ -49,6 +49,9 @@ public class Controller {
     @GetMapping(path = "/h")
     String checkH(){
         userService.getUser();
+
+        //salaryService.getSalaryDetails("");
+
         return null;
     }
 
@@ -88,9 +91,9 @@ public class Controller {
     ResponseEntity<AuthenticationResp> authenticateUser(@RequestBody AuthenticationRequest request){
         AuthenticationResp resp = null;
         resp = userService.authenticateUser(request);
-        if(resp.getError() != null){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resp);
-        }
+//        if(resp.getError() != null){
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resp);
+//        }
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(resp);
 
     }

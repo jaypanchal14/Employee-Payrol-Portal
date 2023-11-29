@@ -34,4 +34,8 @@ public class SalaryStructure {
     @Column(name = "updatedAt")
     private OffsetDateTime updatedAt;
 
+//    @OneToOne()
+//    @JoinColumn(name = "user_id")
+//    private User user;
+
 }
