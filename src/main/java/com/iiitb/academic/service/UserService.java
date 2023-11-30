@@ -56,6 +56,14 @@ public class UserService {
         AuthenticationResp resp = new AuthenticationResp();
         User user = null;
 
+        if(request.getUsername() == null || request.getUsername().isEmpty()){
+            Error err = new Error();
+            err.setMsg("Please enter valid username");
+            resp.setError(err);
+            log.error("Please pass a valid Username.");
+            return resp;
+        }
+
         user = userRepo.findUserByUsername(request.getUsername());
         //log.info("User:"+ user);
         if(user == null){

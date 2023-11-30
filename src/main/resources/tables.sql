@@ -16,6 +16,8 @@ INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt)
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('b47777a8-2ca9-479f-9cb1-19acaf328bdf', 'rocky', 'stone', 'handsome', 'rock@sand.com', '2023-11-22 20:53:22', '2023-11-22 20:53:22');
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('id', 'user1', 'password1', 'User-Name', 'user-email@esd.com', '2023-11-23 01:03:37', '2023-11-23 01:03:37');
 
+INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('don', 'don', 'don', 'Don is here', 'don-ka-koi-email-nahi@esd.com', '2023-11-23 01:03:37', '2023-11-23 01:03:37');
+
 select * from user;
 
 
@@ -45,6 +47,8 @@ select * from salary_structure;
 insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('b47777a8-2ca9-479f-9cb1-19acaf328bdf','First-Job',10000,8000,4000,2200);
 insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('4e86ba58-871a-41c5-bca3-2f2b657db219','Professor',20000,10000,4000,34000);
 
+insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('don','Currently Professor',10000,10000,40000,60000);
+
 #drop table salary_detail;
 
 CREATE TABLE salary_detail (
@@ -63,6 +67,12 @@ insert into salary_detail(user_id,description,amount,month,year,salary_slip) val
 
 insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('4e86ba58-871a-41c5-bca3-2f2b657db219','nov salary',34000,'NOV','2023','dummy_file.pdf');
 insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('4e86ba58-871a-41c5-bca3-2f2b657db219','dec salary',34000,'DEC','2023','dummy_file.pdf');
+
+insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('don','SEP salary',60000,'SEP','2023','sample.pdf');
+insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('don','OCT salary',60000,'OCT','2023','sample.pdf');
+insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('don','NOV salary',60000,'NOV','2023','sample.pdf');
+insert into salary_detail(user_id,description,amount,month,year,salary_slip) value ('don','DEC salary',60000,'DEC','2023','sample.pdf');
+
 
 #alter table salary_detail add column salary_slip VARCHAR(255);
 select * from salary_detail;

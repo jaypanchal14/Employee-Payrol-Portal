@@ -28,8 +28,19 @@ public class SalaryService {
     private SalaryStructureService salaryStructureService;
 
     public SalaryDetailsResponse getSalaryDetails(String userId){
+
         List<SalaryDetail> list;
         SalaryDetailsResponse response;
+
+        if(userId == null || userId.isEmpty() || userId.equals("null")){
+            response = new SalaryDetailsResponse();
+            Error err = new Error();
+            err.setMsg("Please enter valid userId");
+            response.setError(err);
+            log.error("Please pass a valid userId.");
+            return response;
+        }
+
         try {
             log.info("Request received for user-id:"+userId);
             Salary salary = salaryStructureService.getSalaryStructureFromUserId(userId);

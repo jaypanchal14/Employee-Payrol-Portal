@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface SalaryRepo extends JpaRepository<SalaryDetail, Integer> {
 
-    @Query("SELECT s FROM SalaryDetail s where s.user_id = ?1 order by s.paymentDate desc")
+    @Query("SELECT s FROM SalaryDetail s where s.user_id = ?1 order by s.id desc")
     List<SalaryDetail> findAllDetailsByUserId(String userId);
 
     @Query("SELECT s.salary_slip FROM SalaryDetail s where s.id = ?1 and s.user_id = ?2")
