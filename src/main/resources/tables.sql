@@ -15,7 +15,6 @@ CREATE TABLE user (
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('4e86ba58-871a-41c5-bca3-2f2b657db219', 'j', 'j', 'j', 'j@gmail.com', '2023-11-24 18:57:08', '2023-11-24 18:57:08');
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('b47777a8-2ca9-479f-9cb1-19acaf328bdf', 'rocky', 'stone', 'handsome', 'rock@sand.com', '2023-11-22 20:53:22', '2023-11-22 20:53:22');
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('id', 'user1', 'password1', 'User-Name', 'user-email@esd.com', '2023-11-23 01:03:37', '2023-11-23 01:03:37');
-
 INSERT INTO esd.user (id, username, password, name, email, createdAt, updatedAt) VALUES ('don', 'don', 'don', 'Don is here', 'don-ka-koi-email-nahi@esd.com', '2023-11-23 01:03:37', '2023-11-23 01:03:37');
 
 select * from user;
@@ -46,7 +45,6 @@ select * from salary_structure;
 
 insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('b47777a8-2ca9-479f-9cb1-19acaf328bdf','First-Job',10000,8000,4000,2200);
 insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('4e86ba58-871a-41c5-bca3-2f2b657db219','Professor',20000,10000,4000,34000);
-
 insert into salary_structure(user_id, description, basic_pay, hra_pay, other_allowance, total_salary) value('don','Currently Professor',10000,10000,40000,60000);
 
 #drop table salary_detail;
